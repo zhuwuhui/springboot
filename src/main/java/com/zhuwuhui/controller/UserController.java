@@ -23,7 +23,9 @@ public class UserController {
         return "index";
     }
 
-    //猪无悔测试
+    /**
+    * 猪无悔测试2
+    * */
     @RequestMapping("/getInfo")
     public String getInfo(Model model){
         List<User> list = userService.getInfo();
