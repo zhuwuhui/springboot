@@ -16,7 +16,7 @@ public class Test {
         list.add(user2);
         list.add(user3);
         user1.setName("小福贵");
-        user2.setName("小四喜");
+        user2.setName("大四喜");
         user3.setName("小月白");
         list.forEach(user -> System.out.println(user.getName()));
     }
