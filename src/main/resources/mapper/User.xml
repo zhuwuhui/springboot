@@ -7,5 +7,9 @@
     <select id="getInfo" resultType="com.zhuwuhui.entity.User">
         select * from user;
     </select>
+
+    <select id="checkUser" resultType="java.lang.Boolean">
+        select count(*) from user where userName = #{userName} and password = #{password};
+    </select>
 </mapper>
 
