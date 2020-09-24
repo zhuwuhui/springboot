@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.HtmlUtils;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * @author zhuwuhui
@@ -21,9 +21,9 @@ public class UserController {
     @Resource
     private UserService userService;
 
-    @RequestMapping("/index")
+    @RequestMapping("/test")
     public String test(){
-        return "index";
+        return "test";
     }
 
     /**
@@ -39,7 +39,7 @@ public class UserController {
     @CrossOrigin
     @PostMapping(value = "api/login")
     @ResponseBody
-    public Result login(@RequestBody User user) {
+    public Result login(@RequestBody User user, HttpSession session) {
     // 对 html 标签进行转义，防止 XSS 攻击
         String userName = user.getUserName();
         userName = HtmlUtils.htmlEscape(userName);
@@ -49,6 +49,7 @@ public class UserController {
             System.out.println("test");
             return new Result(400);
         } else {
+            session.setAttribute("user", user);
             return new Result(200);
         }
     }
