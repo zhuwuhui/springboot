@@ -2,6 +2,9 @@ package com.zhuwuhui.entity;
 
 import lombok.Data;
 
+/**
+ * @author zhuwuhui
+ */
 @Data
 public class User {
 

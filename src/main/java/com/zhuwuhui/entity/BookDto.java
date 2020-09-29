@@ -6,9 +6,7 @@ import lombok.Data;
  * @author zhuwuhui
  */
 @Data
-public class Category {
-
-    private Integer id;
+public class BookDto extends Book{
 
     private String name;
 }

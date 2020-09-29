@@ -8,6 +8,22 @@
         select * from Book;
     </select>
 
+    <select id="getInfoByCategoryId" resultType="com.zhuwuhui.entity.BookDto">
+        SELECT
+            c.NAME,
+            b.cover,
+            b.title,
+            b.author,
+            b.date,
+            b.press,
+            b.abs
+        FROM
+            book b
+            LEFT JOIN category c ON b.cid = c.id
+        WHERE
+            b.cid = #{cId}
+    </select>
+
     <insert id="insertBook" parameterType="com.zhuwuhui.entity.Book">
     insert into Book
     <trim prefix="(" suffix=")" suffixOverrides=",">

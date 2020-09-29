@@ -2,6 +2,7 @@ package com.zhuwuhui.impl;
 
 import com.zhuwuhui.dao.BookDao;
 import com.zhuwuhui.entity.Book;
+import com.zhuwuhui.entity.BookDto;
 import com.zhuwuhui.service.BookService;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +18,11 @@ public class BookServiceImpl implements BookService {
     @Override
     public List<Book> getInfo() {
         return bookDao.getInfo();
+    }
+
+    @Override
+    public List<BookDto> getInfoByCategoryId(Integer cId) {
+        return bookDao.getInfoByCategoryId(cId);
     }
 
     @Override
