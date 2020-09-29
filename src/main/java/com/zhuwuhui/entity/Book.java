@@ -3,7 +3,7 @@ package com.zhuwuhui.entity;
 import lombok.Data;
 
 /**
- * @author zhuwuhui
+ * @author  zhuwuhui
  */
 @Data
 public class Book {
