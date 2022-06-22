@@ -26,6 +26,9 @@ public class UserController {
         System.out.println("远程");
         System.out.println("远程");
         System.out.println("远程");
+        System.out.println("本地");
+        System.out.println("本地");
+        System.out.println("本地");
         return "test";
     }
 
