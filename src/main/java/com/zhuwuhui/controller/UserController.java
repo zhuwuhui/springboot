@@ -23,6 +23,7 @@ public class UserController {
 
     @RequestMapping("/test")
     public String test(){
+        System.out.println("311");
         return "test";
     }
 
