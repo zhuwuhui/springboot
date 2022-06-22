@@ -5,6 +5,8 @@ import com.zhuwuhui.entity.User;
 public class Test {
 
     public static void main(String[] args) {
-        System.out.println("我");
+        System.out.println("远程");
+        System.out.println("远程");
+        System.out.println("远程");
     }
 }
