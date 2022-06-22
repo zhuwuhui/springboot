@@ -8,5 +8,6 @@ public class Test {
         System.out.println("local");
         System.out.println("local");
         System.out.println("local");
+        System.out.println("我");
     }
 }
