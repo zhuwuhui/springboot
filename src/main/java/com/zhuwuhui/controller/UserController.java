@@ -23,9 +23,6 @@ public class UserController {
 
     @RequestMapping("/test")
     public String test(){
-        System.out.println("远程");
-        System.out.println("远程");
-        System.out.println("远程");
         return "test";
     }
 
