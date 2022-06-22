@@ -32,6 +32,7 @@ public class UserController {
     * */
     @RequestMapping("/getInfo")
     public String getInfo(Model model){
+        System.out.println("我我我");
         List<User> list = userService.getInfo();
         model.addAttribute("user",list);
         return "user";
